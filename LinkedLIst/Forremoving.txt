@@ -1,0 +1,36 @@
+In the context of a `LinkedList` in Java, `poll`, `pop`, and `remove` are methods that serve different purposes:
+
+1. **poll() in LinkedList:**
+   - The `poll()` method is part of the `Queue` interface and is also implemented by the `LinkedList` class.
+   - It retrieves and removes the head (first element) of the list. If the list is empty, it returns `null`.
+   - Example:
+     ```java
+     LinkedList<Integer> list = new LinkedList<>();
+     Integer head = list.poll();
+     ```
+
+2. **pop() in LinkedList:**
+   - The `pop()` method is specific to the `LinkedList` class and is used to remove and return the first element (head) of the list, similar to `poll()`.
+   - It is commonly associated with the `Stack` interface. In a stack, `pop()` removes and returns the element at the top of the stack.
+   - Example:
+     ```java
+     LinkedList<Integer> stack = new LinkedList<>();
+     Integer topElement = stack.pop();
+     ```
+
+3. **remove() in LinkedList:**
+   - The `remove()` method in the `LinkedList` class can be used in various ways depending on its overloaded forms.
+   - When used without arguments, it removes the first occurrence of the specified element from the list.
+   - When used with an index as an argument, it removes the element at the specified index.
+   - Example:
+     ```java
+     LinkedList<String> list = new LinkedList<>();
+     list.remove("example"); // Removes the first occurrence of "example"
+     list.remove(2);         // Removes the element at index 2
+     ```
+
+In summary:
+- `poll()` and `pop()` are primarily used for removing the head (first element) of the list, with `poll()` being more generic and applicable to queues, and `pop()` being associated with the stack behavior.
+- `remove()` can be used for more general removals, either by specifying an element or an index.
+
+It's important to note that the choice between these methods depends on the specific requirements of your program and the data structure you are implementing.
